@@ -10,7 +10,7 @@ for tc in range(1, T+1):
     #2차원 배열
     matrix = []
 
-    for i in range(N):
+    for _ in range(N):
         numbers = list(map(int, input().split()))
         matrix.append(numbers)
 
