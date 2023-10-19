@@ -3,15 +3,57 @@ sys.stdin = open('input.txt')
 
 T = 1
 
+#강사님 풀이
 for tc in range(1, T+1):
     N = int(input())
-    building = list(map(int,input().split()))
+    buildings = list(map(int, input().split()))
 
-    for now in range(N):
+    total = 0
+
+    for i in range(N):
+        now = buildings[i]
+
+        # 현재 위치에 건물이 없다면 다음 건물로 이동
         if now == 0:
             continue
+        
+        # 현재 위치에 건물이 있는경우
+        #-↓↓↓↓↓-
         else:
-            idx = [-2, -1, 1, 2]
+            dx = [-2, -1, 1, 2]
+
+            max_tall = 0
+
+            # 중심을 기준으로 네개의 건물중 가장 큰건물 고르기
+            for j in range(4):
+                # i (now) : 현재위치 (기준점)
+                # dx[j] : 기준 건물을 중심으로 좌우 인덱스
+                
+                comp = buildings[i+dx[j]]
+
+                if max_tall < comp:
+                    max_tall = comp
 
 
-    print(f'#{tc} {left+right}')
+            # 나머지 네개의 건물보다 현재 건물의 높이가 크다면
+            # 조망권 확보!
+            if now > max_tall:
+                view = now - max_tall
+                total += view
+    
+    print(f'{total}')
+
+
+#풀이 전
+# for tc in range(1, T+1):
+#     N = int(input())
+#     building = list(map(int,input().split()))
+
+#     for now in range(N):
+#         if now == 0:
+#             continue
+#         else:
+#             idx = [-2, -1, 1, 2]
+
+
+#     print(f'#{tc} {left+right}')

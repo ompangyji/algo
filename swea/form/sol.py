@@ -7,6 +7,7 @@ for tc in range(1, T+1):
     number = input()
     print(number)
 
+    #-↓↓↓↓↓-
     #2차원 배열
     matrix = []
 
@@ -15,3 +16,6 @@ for tc in range(1, T+1):
         matrix.append(numbers)
 
     print(f'#{tc}')
+
+
+    

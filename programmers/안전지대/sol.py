@@ -1,9 +1,13 @@
+import sys
+print(sys.version)
+
 #지뢰에 인접한 위, 아래, 좌, 우 대각선 칸을 모두 위험지역으로 분류
 #안전한 지역의 칸 수 return
 from pprint import pprint
 import numpy as np
 import pandas as pd
 
+"""
 def solution(board):
     n = len(board)
     danger = set()
@@ -39,3 +43,4 @@ print(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 
 print(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]))
 print(solution([[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]]))
 print(solution([[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]))
+"""

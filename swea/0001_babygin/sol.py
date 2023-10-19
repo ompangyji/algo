@@ -22,3 +22,6 @@ for tc in range(1, T+1):
     if len(run) == 1 and len(triplet) == 3:
         if triplet[0]+1 == triplet[1] and triplet[1]+1 == triplet[2] : 
             print(f'{run[0]},{run[0]},{run[0]} {triplet[0]},{triplet[1]},{triplet[2]}')
+
+
+            
