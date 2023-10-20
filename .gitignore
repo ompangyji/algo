@@ -252,7 +252,8 @@ $RECYCLE.BIN/
 *.lnk
 
 #oneNote
-.one
-
+oneNote
+*.one
+*.onetoc2
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,visualstudiocode,python
