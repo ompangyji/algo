@@ -19,48 +19,49 @@ for tc in range(1, T+1):
         print(node[0], node[1])
 
         nodes[start][end] = 1
-    
-    #pprint(nodes)
+
+    pprint(nodes)
 
     S, G = list(map(int, input().split()))
 
+    print(S, G)
 
-    # nodes => 그래프 (인접행렬)
+    # # nodes => 그래프 (인접행렬)
 
-    # 방문 체크리스트
-    check_list = [False] * (V+1)
+    # # 방문 체크리스트
+    # check_list = [False] * (V+1)
 
-    # dfs용 stack
-    stack = []
+    # # dfs용 stack
+    # stack = []
 
-    # v 부터 시작
-    v = S
-    check_list[v] = True
-    stack.append(v)
+    # # v 부터 시작
+    # v = S
+    # check_list[v] = True
+    # stack.append(v)
 
-    result = 0
+    # result = 0
 
-    while len(stack):
-        for w in range(V+1):
-            # 연결된것을 확인 == 1
-            if nodes[v][w] == 1:
-                # 아직 방문하지 않았다면
-                # =>체크리스트가 False라면
-                if not check_list[w]:
-                    # 나의위치v를 stack에 push
-                    stack.append(v)
-                    check_list[w] = True
+    # while len(stack):
+    #     for w in range(V+1):
+    #         # 연결된것을 확인 == 1
+    #         if nodes[v][w] == 1:
+    #             # 아직 방문하지 않았다면
+    #             # =>체크리스트가 False라면
+    #             if not check_list[w]:
+    #                 # 나의위치v를 stack에 push
+    #                 stack.append(v)
+    #                 check_list[w] = True
 
-                    # w를 현재 위치로 변경
-                    v = w
+    #                 # w를 현재 위치로 변경
+    #                 v = w
 
-                    if w == G:
-                        result = 1         
-                    break
-        # break를 만나지 않은경우
-        # => 방문하지 않은 정점이 없는경우
-        # => 과거의 위치로 돌아가기
-        else:
-            v = stack.pop()
+    #                 if w == G:
+    #                     result = 1         
+    #                 break
+    #     # break를 만나지 않은경우
+    #     # => 방문하지 않은 정점이 없는경우
+    #     # => 과거의 위치로 돌아가기
+    #     else:
+    #         v = stack.pop()
 
-    print(result)
+    #print(result)
